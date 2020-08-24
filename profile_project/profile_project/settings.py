@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -21,12 +20,12 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&@f4)ez-b_fg0!_g7d4ran_h863j^sbwb_4z&7j-dg_c6a1om7'
+SECRET_KEY = '4l0@k^h$bx5w)kk=saj4dmr38$#6s+ghc%o*t37a8t(#d7pep)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'profile_api'
+    'profile_api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -120,8 +120,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 
 AUTH_USER_MODEL = 'profile_api.UserProfile'
